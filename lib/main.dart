@@ -5,7 +5,10 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: LinearGradientWithCenteredText([Colors.black, Colors.white]),
+        body: LinearGradientWithCenteredText([
+          const Color.fromARGB(255, 105, 105, 105),
+          Colors.white,
+        ]),
       ),
     ),
   );

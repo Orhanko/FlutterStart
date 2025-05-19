@@ -13,8 +13,8 @@ class LinearGradientWithCenteredText extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: colors,
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
         ),
       ),
       child: Center(

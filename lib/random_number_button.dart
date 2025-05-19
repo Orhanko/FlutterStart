@@ -10,10 +10,11 @@ class RandomiseWidget extends StatefulWidget {
 }
 
 class _RandomiseWidgetState extends State<RandomiseWidget> {
+  final randomiser = Random();
   var number = 0;
   void randomiseClicked() {
     setState(() {
-      number = Random().nextInt(10);
+      number = randomiser.nextInt(10) + 1;
     });
   }
 
@@ -28,8 +29,18 @@ class _RandomiseWidgetState extends State<RandomiseWidget> {
         ),
         SizedBox(height: 30),
         ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blueAccent,
+            foregroundColor: Colors.white,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
           onPressed: randomiseClicked,
-          child: Text('Randomise number', style: TextStyle(fontSize: 28)),
+          child: const Padding(
+            padding: EdgeInsets.all(10),
+            child: Text('Randomise number', style: TextStyle(fontSize: 20)),
+          ),
         ),
       ],
     );
