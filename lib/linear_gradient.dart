@@ -2,18 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:pocetak/styled_text.dart';
 
 class LinearGradientWithCenteredText extends StatelessWidget {
-  const LinearGradientWithCenteredText({super.key});
+  const LinearGradientWithCenteredText(this.colors, {super.key});
+  final List<Color> colors;
+
   @override
   Widget build(context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [Colors.limeAccent, Colors.black],
+          colors: colors,
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
       ),
-      child: Center(child: StyledText()),
+      child: Center(child: StyledText('Haiii Bluttereee🤗')),
     );
   }
 }
