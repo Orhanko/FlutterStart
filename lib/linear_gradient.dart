@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:pocetak/styled_text.dart';
+import 'package:pocetak/random_number_button.dart';
 
 class LinearGradientWithCenteredText extends StatelessWidget {
   const LinearGradientWithCenteredText(this.colors, {super.key});
   final List<Color> colors;
+  void randomiseClicked() {}
 
   @override
   Widget build(context) {
@@ -15,7 +17,21 @@ class LinearGradientWithCenteredText extends StatelessWidget {
           end: Alignment.bottomRight,
         ),
       ),
-      child: Center(child: StyledText('Haiii Bluttereee🤗')),
+      child: Center(
+        child: RandomiseWidget(),
+
+        // child: Column(
+        //   mainAxisSize: MainAxisSize.min,
+        //   children: [
+        //     StyledText('Haiii Bluttereee🤗'),
+        //     SizedBox(height: 30),
+        //     ElevatedButton(
+        //       onPressed: randomiseClicked,
+        //       child: Text('Randomise number', style: TextStyle(fontSize: 28)),
+        //     ),
+        //   ],
+        // ),
+      ),
     );
   }
 }
